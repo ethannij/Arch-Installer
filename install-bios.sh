@@ -34,7 +34,8 @@ arch-chroot /mnt
 #update hostname file
 echo host >> /etc/hostname
 #update hosts file
-echo 127.0.0.1 localhost ::1 localhost 127.0.1.1 host >> /etc/hosts
+echo -e "127.0.0.1 \tlocalhost\n::1 \t\tlocalhost\n127.0.1.1 \thost" >> /etc/hosts
+#echo 127.0.0.1 localhost ::1 localhost 127.0.1.1 host >> /etc/hosts
 #update pacman
 pacman -Syu --noconfirm
 #network manager
