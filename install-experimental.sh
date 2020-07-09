@@ -3,9 +3,9 @@
 #formatting drive in fdisk
 echo BIOS or EFI? if you used my main.sh script, you should be in EFI
 read TYPE
-if [TYPE=EFI]
+if [ TYPE=EFI ]
 then
-sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | fdisk /dev/sda
+	sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | fdisk /dev/sda
 g
 n
 
@@ -51,9 +51,9 @@ grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 systemctl enable NetworkManager.service
 echo do not forget to set root password, and create a user before rebooting
-elif [TYPE=BIOS]
+fi
+#
+if [ TYPE=BIOS ]
 then
-echo BIOS selected
-else
-echo Invalid selection, please input BIOS or EFI
+	echo BIOS selected
 fi
