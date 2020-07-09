@@ -24,6 +24,8 @@ follow the prompts
   
 When specifying ISO locations, you must specify the entire path ex. `/home/ethannij/Desktop/ArchInstallation/GuestAdditions.iso`  
 # Installation instructions  
+-Before running the install.sh script. Ensure you have a wifi connection.  
+  
 When the arch linux installation starts type the following in the commandline of the guest -  
   
 `curl -o- https://raw.githubusercontent.com/ethannij/Arch-Installer/master/install.sh type | 
