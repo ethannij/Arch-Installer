@@ -1,4 +1,4 @@
-# Virtualbox-Arch-linux-installation-script  
+# Arch-Installer 
 # Prerequisites  
 -A working virtualbox (you should be able to launch VMs with no problem  
 -The arch linux installation ISO - available from the archlinux.org  
