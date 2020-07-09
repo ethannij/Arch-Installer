@@ -26,7 +26,7 @@ Directory=$Path
 
 
 #creating virtual harddisk
-echo Input desired size of virtual harddisk MiB Min: 2000
+echo Input desired size of virtual harddisk MiB
 read -r diskSizeInput
 diskSize="$(( diskSizeInput ))"
 cd "$Directory/$VMName"
