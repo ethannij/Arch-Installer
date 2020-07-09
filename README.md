@@ -6,7 +6,7 @@
 -main.sh is meant to set up an arch linux vm on a linux host. This is not required to install arch linux using a script.  
 -install-x.sh will install arch linux to a virtual machine, or to a host.  
 -properly format your drive before starting installation. If a previous filetype is detected, installation will not continue.  
--the install scripts will format and install onto /dev/sda by default, with a 512M efi partition, and the remainder as a linux filesystem on sda2. Adapt the script accordingly.
+-the install scripts will format and install onto /dev/sda by default, with a 512M efi partition, and the remainder as a linux filesystem on sda2. Adapt the script accordingly.  
 -Network connection is required before running install-x.sh.   
 
 # Prerequisites  
