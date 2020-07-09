@@ -51,5 +51,5 @@ Upon system startup, type:
 127.0.1.1 host```
 
 # Coming soon  
--support for BIOS
--fix for errors caused by confirmation messages while formatting disks
+-support for BIOS  
+-fix for errors caused by confirmation messages while formatting disks  
