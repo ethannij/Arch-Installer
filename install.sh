@@ -1,21 +1,22 @@
 #Script Installs Arch.
-
+#
 #formatting drive in fdisk
 sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | fdisk /dev/sda
 g
 n
 
+
 +512M
 t
 1
 n
-
+2
 
 
 w
 q
 EOF
-
+#
 #properly format main drive
 `mkfs.ext4 /dev/sda2`
 #properly format efi
