@@ -45,5 +45,5 @@ echo -e "root" | passwd root
 pacman -S grub efibootmgr --noconfirm
 mkdir /boot/efi
 mount /dev/sda1 /boot/efi
-grub-install --target=86x_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
