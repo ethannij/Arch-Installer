@@ -8,6 +8,8 @@
 -install.sh will only work with an empty GPT drive, if you have used the drive in the past, format it to gpt before running the script.  
 -the install script will format and install onto /dev/sda by default, with a 512M efi partition, and the remainder as a linux filesystem on sda2. Adapt the script accordingly.
 -Network connection is required before running install.sh. 
+install-experimental.sh is for testing purposes. There is no reason for you to use it.  
+
 # Prerequisites  
 -A working virtualbox (you should be able to launch VMs with no problem  
 -The arch linux installation ISO - available from the archlinux.org  
