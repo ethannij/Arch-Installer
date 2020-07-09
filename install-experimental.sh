@@ -1,9 +1,10 @@
+#!/bin/bash
 #Script Installs Arch.
 #
 #formatting drive in fdisk
-echo BIOS or EFI? if you used my main.sh script, you should be in EFI
-read TYPE
-if [ TYPE=EFI ]
+read -p "BIOS or EFI?" type
+#
+if [ $type=EFI ]
 then
 	sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | fdisk /dev/sda
 g
@@ -51,9 +52,9 @@ grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 systemctl enable NetworkManager.service
 echo do not forget to set root password, and create a user before rebooting
-fi
-#
-if [ TYPE=BIOS ]
+elif [ $type=BIOS ]
 then
-	echo BIOS selected
+	echo "BIOS selected"
+else
+	echo "Invalid selection, please type BIOS or EFI"
 fi
