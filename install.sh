@@ -39,11 +39,11 @@ pacman -Syu --noconfirm
 pacman -S networkmanager --noconfirm
 #mkinitcpio
 mkinitcpio -P
-#set root password
-echo -e "root" | passwd root
 #set up grub
 pacman -S grub efibootmgr --noconfirm
 mkdir /boot/efi
 mount /dev/sda1 /boot/efi
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
+systemctl enable NetworkManager.service
+echo do not forget to set root password, and create a user before rebooting
