@@ -31,17 +31,17 @@ When the arch linux installation starts type the following in the commandline of
 `curl -o- https://raw.githubusercontent.com/ethannij/Arch-Installer/master/install.sh type | 
 bash`  
   
-When the installion is complete, reboot the system.  
-username: root  
-password: root  
+When the installion is complete, make sure to set a root password, and create a user before rebooting the system.  
+
   
 If the username or password do not work upon boot, you may have to set it manually from the arch live cd  
 
 # After Installation  
+if network does not work after the installation:  
+
 Upon system startup, type:  
 `$ systemctl start NetworkManager.service` and  
 `$ systemctl enable NetworkManager.service`  
-Congratulations you now have an arch linux virtual machine in less than 5 minutes.
 
 # Notes  
 /etc/hostname is set to "host" by default.
@@ -49,3 +49,7 @@ Congratulations you now have an arch linux virtual machine in less than 5 minute
 /etc/hosts includes: ```127.0.0.1 localhost  
 ::1 localhost  
 127.0.1.1 host```
+
+# Coming soon  
+-support for BIOS
+-fix for errors caused by confirmation messages while formatting disks
