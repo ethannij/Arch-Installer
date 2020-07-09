@@ -6,4 +6,4 @@
 -Virtualbox extension pack  
 -Enough storage to install arch linux  
   
-#Installation Instructions  
+# Installation Instructions  
