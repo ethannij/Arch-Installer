@@ -47,9 +47,3 @@ mkdir /boot/efi
 mount /dev/sda1 /boot/efi
 grub-install --target=86x_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
-exit
-echo upon next boot. systemctl start NetworkManager.service and systemctl enable NetworkManger.service
-read
-echo username: root, password: root
-read
-reboot
