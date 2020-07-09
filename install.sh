@@ -1,31 +1,21 @@
 #Script Installs Arch.
 
 #formatting drive in fdisk
-fdisk /dev/sda;
-#new gpt table
-`g`
-#new partition
-`n`
-#default partition 1
-`\n`
-#default first sector size
-`\n`
-#512+ last sector size
-`+512M`
-#change type
-`t`
-#efi type
-`1`
-#new drive
-`n`
-#automatically partition 2
-`\n`
-#automatically first sector size
-`\n`
-#automatically last sector size
-`\n`
-#write changes
-`w`
+sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | fdisk /dev/sda
+g
+n
+
++512M
+t
+1
+n
+
+
+
+w
+q
+EOF
+
 #properly format main drive
 `mkfs.ext4 /dev/sda2`
 #properly format efi
