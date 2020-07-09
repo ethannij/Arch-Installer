@@ -1,3 +1,7 @@
+# WARNING
+-Do NOT run install.sh on a system with an os already on it. This may irreversably damage your system.  
+-Install.sh is meant to be run from the arch live install cd  
+  
 # DISCLAIMER
 -main.sh is meant to set up an arch linux vm on a linux host. This is not required to install arch linux using a script.  
 -install.sh will install arch linux to a virtual machine, or to a host.  
