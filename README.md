@@ -16,7 +16,7 @@
 -Virtualbox extension pack  
 -Enough storage to install arch linux  
   
-# Virtualbox instructions
+# Virtualbox instructions - LINUX ONLY  
 On host system, start virtualbox  
   
 Run main.sh script (through the terminall) ex. `/bin/bash main.sh`  
@@ -24,7 +24,7 @@ Run main.sh script (through the terminall) ex. `/bin/bash main.sh`
 follow the prompts  
   
 When specifying ISO locations, you must specify the entire path ex. `/home/ethannij/Desktop/ArchInstallation/GuestAdditions.iso`  
-# Installation instructions  
+# Installation instructions - UNIVERSAL  
 -Before running the install-x.sh script. Ensure you have a wifi connection.  
   
 When the arch linux installation starts type the following in the commandline of the guest -  
