@@ -43,14 +43,14 @@ VBoxManage storageattach "$VM" --storagectl "SATA Controller" --port 0 \
   --device 0 --type hdd --medium "$VM".vdi
 
 #Adding GuestAdditions to VM
-echo Input Guest Additions ISO directory
-read -r ADDDIR
-ADD=$ADDDIR
-cd "$Directory"
+#echo Input Guest Additions ISO directory
+#read -r ADDDIR
+#ADD=$ADDDIR
+#cd "$Directory"
 
 VBoxManage storagectl "$VM" --name "IDE Controller" --add ide
 VBoxManage storageattach "$VM" --storagectl "IDE Controller" --port 1 \
- --device 1 --type dvddrive --medium "$ADD"
+ #--device 1 --type dvddrive --medium "$ADD"
 
 #Adding ISO to VM
 echo Input Installation ISO directory
