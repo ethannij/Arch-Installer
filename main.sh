@@ -47,9 +47,7 @@ VBoxManage storageattach "$VM" --storagectl "SATA Controller" --port 0 \
 #read -r ADDDIR
 #ADD=$ADDDIR
 #cd "$Directory"
-
-VBoxManage storagectl "$VM" --name "IDE Controller" --add ide
-VBoxManage storageattach "$VM" --storagectl "IDE Controller" --port 1 \
+#VBoxManage storageattach "$VM" --storagectl "IDE Controller" --port 1 \
  #--device 1 --type dvddrive --medium "$ADD"
 
 #Adding ISO to VM
@@ -57,7 +55,7 @@ echo Input Installation ISO directory
 read -r ISODIR
 ISO=$ISODIR
 cd "$Directory"
-
+VBoxManage storagectl "$VM" --name "IDE Controller" --add ide
 VBoxManage storageattach "$VM" --storagectl "IDE Controller" --port 0 \
   --device 0 --type dvddrive --medium "$ISO"
 
@@ -66,7 +64,6 @@ VBoxManage modifyvm "$VM" --ioapic on
 VBoxManage modifyvm "$VM" --boot1 dvd --boot2 disk --boot3 none --boot4 none
 VBoxManage modifyvm "$VM" --memory 1024 --vram 128
 VBoxManage modifyvm "$VM" --firmware efi
-VBoxManage modifyvm "$VM" --ioapic on
  
 #Booting VM
 VBoxManage startvm "$VM"
